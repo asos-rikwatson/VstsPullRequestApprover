@@ -88,7 +88,7 @@ function Get-VstsApiBaseUri
 
     $variables = Get-VstsConnectionVariables $vcsroot
     
-    return "https://$($variables.Instance)/$($variables.TeamProject)/_apis/git/repositories/$($variables.Repository)"
+    return "https://$($variables.Instance)/$($variables.ProjectCollection)/$($variables.TeamProject)/_apis/git/repositories/$($variables.Repository)"
 }
 
 function Get-PullRequestId
